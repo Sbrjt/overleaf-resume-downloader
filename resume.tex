@@ -1,0 +1,185 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.3in}
+\addtolength{\evensidemargin}{-0.3in}
+\addtolength{\textwidth}{0.6in}
+\addtolength{\topmargin}{0in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+\vspace{10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+\item\small{
+{#1 \vspace{-2pt}}
+}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-2pt}\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{\small#1} & \textit{\small #2} \\
+\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\small#1 & #2 \\
+\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%% RESUME STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+\textbf{\Huge \scshape Shubhrajit Sadhukhan} \\ \vspace{1pt}
+\small 8240687299 $|$ \href{mailto:shubhrajit.2023ug3007@iiitranchi.ac.in}{shubhrajit.2023ug3007@iiitranchi.ac.in} $|$
+\href{https://linkedin.com/in/shubhrajit-sadhukhan}{linkedin.com/in/shubhrajit-sadhukhan} $|$
+\href{https://github.com/Sbrjt}{github.com/Sbrjt}
+\end{center}
+
+%-----------EDUCATION-----------
+%(with Specialization of Data Science and Artificial Intelligence)
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Indian Institute of Information Technology, Ranchi}{Ranchi, India}
+{BTech in Computer Science and Engineering (AI\&DS); CGPA 8.66}{2023 -- 2027}
+\resumeSubheading
+{Army Public School, Barrackpore}{Kolkata, West Bengal}
+{CBSE 10+2}{2011 -- 2023}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Sbrjt/MealMap}{\href{}{\underline{MealMap}}}} $|$ \emph{React, Firebase, Mapbox}}{2024}
+\resumeItemListStart
+\resumeItem{Developed a web application where donors can donate food and NGOs or individuals in need can locate nearby food resources using Mapbox}
+\resumeItem{Built the backend by deploying a Node.js environment on Firebase Functions and used Firebase Cloud Messaging (FCM) to send push notifications of nearby donations instantly.}
+\resumeItem{Built a PWA using Workbox and also set up CI/CD using github actions}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Sbrjt/josaa-cutoffs}{\href{}{\underline{josaa-cutoffs}}}} $|$ \emph{HTML, Bootstrap, Javascript, Sqlite, Web scrapping}}{2023}
+\resumeItemListStart
+\resumeItem{Developed a user-friendly website to display jee cutoffs with custom filters}
+\resumeItem{Scrapped the data from the official website, then imported it into a local sqlite database and queried it using sql.js}
+\resumeItem{Achieved around 3000 users during May-June 2024, with an average engagement time of 2 minutes (according to Google Analytics)}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Sbrjt/Chatbot}{\href{}{\underline{cli Chatbot}}}} $|$ \emph{OpenAI API, Node.js}}{2024}
+\resumeItemListStart
+\resumeItem{Used OpenAI api to generate responses based on user input using the gpt-3.5-turbo model}
+\resumeItem{It maintains a chat history to provide contextually relevant responses}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Sbrjt/Visual-Tower-of-Hanoi}{\href{}{\underline{Visual-Tower-of-Hanoi}}}} $|$ \emph{Python}}{2024}
+\resumeItemListStart
+\resumeItem{Implemented the classic Tower of Hanoi problem using recursion}
+\resumeItem{Created a visual representation of the disks using ASCII art, that allows users to observe each step by pressing Enter}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}{: Python, JavaScript, HTML, CSS, SQL} \\
+\textbf{Frameworks}{: Express.js, Bootstrap, Mongoose} \\
+\textbf{Libraries}{: React, React Native, NumPy, Matplotlib} \\
+\textbf{Developer Tools}{: Git, Docker, Firebase}
+}}
+\end{itemize}
+
+
+\section{Accomplishments}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+{Participated in Smart India Hackathon 2024} \\
+}}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
